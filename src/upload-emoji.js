@@ -9,8 +9,9 @@ const NO_OP = function () {};
 
 const superagentThrottle = new SuperagentThrottle({
   active: true,
-  concurrent: 5,
-  rate: Infinity
+  concurrent: 1,
+  ratePer: 10000, 
+  rate: 3, 
 });
 
 export default function uploadEmoji (file, callback = NO_OP) {
